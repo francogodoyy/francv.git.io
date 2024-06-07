@@ -1,0 +1,272 @@
+/* Estilos generales */
+body {
+    background-image: url('./assets/images/oscuro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de la cabecera */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacion_titulo {
+    font-size: 2.5em;
+    color: aliceblue;
+    font-style: oblique;
+    background-color: #020202;
+    transition: color 0.3;
+}
+
+.enlaces {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.enlaces_item {
+    margin: 0px 40px;
+    font-size: 1.2em;
+}
+
+.enlaces_enlace {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.enlaces_enlace:hover {
+    color: #ddd;
+}
+
+/* Estilos del contenido principal */
+.principal {
+    padding: 100px 20px 20px; 
+}
+
+.presentacion {
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.presentacion_contenedor_info {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background: none;
+    border-radius: 10px;
+}
+
+.presentacion_titulo {
+    font-size: 2.5em;
+    margin: 0;
+    animation: cambioColor 5s infinite;
+}
+
+.presentacion_parrafo {
+    font-size: 1.5em;
+    margin: 60px 100px;
+}
+
+.boton {
+    text-decoration: none;
+    padding: 20px 70px;
+    border-radius:10px;
+    background-color: #f3f3f3;
+    color: #020202;
+    margin: 50px 50px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #2e9cf7;
+}
+
+.boton-oscuro {
+    background-color: #4b6af8;
+}
+
+.boton-oscuro:hover {
+    background-color: #2e9cf7;
+}
+
+/*Estilos para Sobre Mi*/
+.sobre-mi {
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+.sobre-mi__contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-mi__foto-contenedor {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sobre-mi__foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.sobre-mi__contenido {
+    flex: 2;
+    text-align: left;
+}
+
+.sobre-mi__texto, .sobre-mi__historia, .sobre-mi__hobbies {
+    margin-bottom: 20px;
+}
+
+.sobre-mi__titulo {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.sobre-mi__subtitulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sobre-mi__parrafo {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Estilos de los proyectos */
+.articulo_sobre_mi {
+    padding: 20px;
+}
+
+.articulo_titulo {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.descripcion_porta_retrato img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.seccion_descripcion_info {
+    margin-top: 20px;
+}
+
+.seccion_descripcion_titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.seccion_descripcion_parrafo {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contenedor_tarjetas_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta__imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.tarjeta__titulo {
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.tarjeta__parrafo {
+    margin-bottom: 10px;
+}
+
+/* Estilos del pie de página */
+.pie_pagina {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.pie_pagina__columna {
+    margin-bottom: 20px;
+}
+
+.pie_pagina__titulo_columna {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.enlaces_redes .enlaces_item {
+    margin: 0 5px;
+}
+
+.enlaces__enlace_footer {
+    color: #fff;
+    text-decoration: none;
+}
+
+.enlaces__enlace_footer:hover {
+    color: #ddd;
+}
+
+.enlaces__icono {
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes cambioColor {
+    0% { color: rgb(255, 0, 98); } /* Color inicial */
+    25% { color: blue; } /* Cambio de color en el 25% del tiempo */
+    50% { color: rgb(8, 151, 247); } /* Cambio de color en el 50% del tiempo */
+    75% { color: orange; } /* Cambio de color en el 75% del tiempo */
+    100% { color: rgb(111, 0, 255); } /* Color final, igual al inicial para hacer un ciclo */
+}
