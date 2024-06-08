@@ -230,37 +230,66 @@ header {
 
 /* Estilos del pie de página */
 .pie_pagina {
+    padding: 40px 20px;
     background-color: #333;
     color: #fff;
-    padding: 20px;
     text-align: center;
 }
 
+.pie_pagina__contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .pie_pagina__columna {
-    margin-bottom: 20px;
+    flex: 1;
+    margin: 20px;
 }
 
 .pie_pagina__titulo_columna {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.enlaces_redes .enlaces_item {
-    margin: 0 5px;
+.enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.enlaces__item {
+    margin-bottom: 10px;
 }
 
 .enlaces__enlace_footer {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
 .enlaces__enlace_footer:hover {
-    color: #ddd;
+    color: #4b6af8;
+}
+
+.enlaces_redes .enlaces__item {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .enlaces__icono {
     width: 30px;
     height: 30px;
+}
+
+.pie_pagina__copyright {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #bbb;
 }
 
 @keyframes cambioColor {
