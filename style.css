@@ -60,21 +60,22 @@ header {
 
 /* Estilos del contenido principal */
 .principal {
-    padding: 100px 20px 20px; 
+    padding: 0;
+    margin-top: 60px; /* Ajustar según el tamaño de la cabecera */
 }
 
+/* Estilos de la sección de presentación */
 .presentacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     color: #fff;
     text-align: center;
-    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/oscuro.jpg') no-repeat center center/cover;
 }
 
 .presentacion_contenedor_info {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 0 auto;
     width: 80%;
     max-width: 800px;
     padding: 20px;
@@ -83,43 +84,61 @@ header {
 }
 
 .presentacion_titulo {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0;
     animation: cambioColor 5s infinite;
 }
 
 .presentacion_parrafo {
     font-size: 1.5em;
-    margin: 60px 100px;
+    margin: 30px 0;
+}
+
+.presentacion_contenedor_botones {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centra horizontalmente los botones */
+    margin-top: 30px; /* Añade espacio superior si es necesario */
+}
+
+.boton, .boton-oscuro {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: #fff;
+    justify-content:right;
 }
 
 .boton {
-    text-decoration: none;
-    padding: 20px 70px;
-    border-radius:10px;
-    background-color: #f3f3f3;
-    color: #020202;
-    margin: 50px 50px;
-    transition: background-color 0.3s;
+    background-color: #4b6af8;
+
 }
 
 .boton:hover {
-    background-color: #2e9cf7;
+    background-color: #3a54c7;
 }
 
 .boton-oscuro {
-    background-color: #4b6af8;
+    background-color: #333;
 }
 
 .boton-oscuro:hover {
-    background-color: #2e9cf7;
+    background-color: #555;
 }
 
 /*Estilos para Sobre Mi*/
 .sobre-mi {
+    background-image: url('./assets/images/degradado.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 60px 20px;
     background-color: #f0f0f0;
-    color: #333;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -135,7 +154,9 @@ header {
 .sobre-mi__foto-contenedor {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -143,6 +164,22 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin-bottom: 20px; /* Espacio entre la foto y la información */
+}
+
+.sobre-mi__informacion {
+    text-align: center;
+}
+
+.sobre-mi__informacion h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #4b6af8;
+}
+
+.sobre-mi__informacion p {
+    font-size: 1em;
+    margin: 0 0 10px;
 }
 
 .sobre-mi__contenido {
@@ -169,6 +206,7 @@ header {
     line-height: 1.6;
     margin-bottom: 10px;
 }
+
 
 /* Estilos de los proyectos */
 .articulo_sobre_mi {
@@ -206,6 +244,45 @@ header {
     gap: 20px;
 }
 
+/* Estilos del modal */
+.modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Fijar en la pantalla */
+    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+    padding-top: 60px; /* Espacio en la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+}
+
+.modal__contenido {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal__cerrar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal__cerrar:hover,
+.modal__cerrar:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 .tarjeta {
     background: #fff;
     padding: 20px;
@@ -217,6 +294,11 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
+    transition: transform 0.3s; /*Transición para el efecto de agrandamiento*/
+}
+
+.tarjeta__imagen:hover {
+    transform: scale(1.5); /*Efecto de agrandamiento*/
 }
 
 .tarjeta__titulo {
@@ -240,7 +322,8 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -248,28 +331,37 @@ header {
 .pie_pagina__columna {
     flex: 1;
     margin: 20px;
+    min-width: 200px;
 }
 
 .pie_pagina__titulo_columna {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #4b6af8;
+    text-transform: uppercase;
+    border-bottom: 2px solid #4b6af8;
+    padding-bottom: 10px;
 }
 
 .enlaces {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .enlaces__item {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .enlaces__enlace_footer {
-    color: #fff;
+    display: block;
+    color: #fcfcfc;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .enlaces__enlace_footer:hover {
@@ -278,18 +370,26 @@ header {
 
 .enlaces_redes .enlaces__item {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .enlaces__icono {
-    width: 30px;
-    height: 30px;
+    padding: 0px 30px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.enlaces__icono:hover {
+    transform: scale(1.1);
 }
 
 .pie_pagina__copyright {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 1em;
     color: #bbb;
+    border-top: 1px solid #4b6af8;
+    padding-top: 20px;
 }
 
 @keyframes cambioColor {
